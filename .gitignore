@@ -1,3 +1,9 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+.idea/*
+target/*
+*.iml
+inbound-service-proxy-log/*
+/target/
+.classpath
+.project
+.settings
+

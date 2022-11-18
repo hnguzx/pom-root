@@ -18,6 +18,7 @@
         <mysql.jdbc.version>8.0.29</mysql.jdbc.version>
         <mybatis.spring.version>2.2.1</mybatis.spring.version>
         <swagger.version>3.0.0</swagger.version>
+        <apollo.version>1.9.2</apollo.version>
 
         <spring-may.version>1.0.0-SNAPSHOT</spring-may.version>
     </properties>
@@ -70,12 +71,6 @@
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper</artifactId>
                 <version>4.1.4</version>
-            </dependency>
-            <!--        mysql-->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.29</version>
             </dependency>
             <!--        druid-->
             <dependency>
@@ -170,6 +165,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>2.7.2</version>
+            </dependency>
+            <!--        apollo-->
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.version}</version>
             </dependency>
 
             <!-- begin commons -->
@@ -292,10 +293,15 @@
     </build>
 
     <distributionManagement>
-        <!--<repository>
+        <repository>
             <id>release</id>
             <name>Internal Release Repository</name>
-            <url>https://pkgs.d.xiaomi.net:443/artifactory/maven-release-virtual</url>
-        </repository>-->
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Internal Snapshot Repository</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>

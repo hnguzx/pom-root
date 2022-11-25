@@ -41,6 +41,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!--mysql-->
             <dependency>
                 <groupId>mysql</groupId>
@@ -147,6 +148,12 @@
                 <version>3.0.4</version>
             </dependency>
 
+<!--            spring boot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
 
             <!--        zipkin-->
             <dependency>
@@ -154,6 +161,23 @@
                 <artifactId>spring-cloud-starter-zipkin</artifactId>
                 <version>2.2.8.RELEASE</version>
             </dependency>
+            <!--        ribbon-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+                <version>2.2.10.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+                <version>2.2.10.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+                <version>2.2.10.RELEASE</version>
+            </dependency>
+
             <!--        redis-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
